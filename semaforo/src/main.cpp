@@ -1,27 +1,34 @@
 #include <iostream>
 #include <thread>
 #include <chrono>
-
 using namespace std;
 
+enum State { RED, GREEN, YELLOW };
+
 int main() {
+    State state = RED;
+
     while (true) {
+        switch (state) {
+            case RED:
+                cout << "RED: ON  YELLOW: OFF  GREEN: OFF" << endl;
+                this_thread::sleep_for(chrono::seconds(5));
+                state = GREEN;
+                break;
 
-        cout << "RED: ON" << endl;
-        cout << "YELLOW: OFF" << endl;
-        cout << "GREEN: OFF" << endl << endl;
-        this_thread::sleep_for(chrono::seconds(5));
+            case GREEN:
+                cout << "RED: OFF  YELLOW: OFF  GREEN: ON" << endl;
+                this_thread::sleep_for(chrono::seconds(5));
+                state = YELLOW;
+                break;
 
-        cout << "RED: OFF" << endl;
-        cout << "YELLOW: ON" << endl;
-        cout << "GREEN: OFF" << endl << endl;
-        this_thread::sleep_for(chrono::seconds(2));
-
-        cout << "RED: OFF" << endl;
-        cout << "YELLOW: OFF" << endl;
-        cout << "GREEN: ON" << endl << endl;
-        this_thread::sleep_for(chrono::seconds(5));
+            case YELLOW:
+                cout << "RED: OFF  YELLOW: ON  GREEN: OFF" << endl;
+                this_thread::sleep_for(chrono::seconds(2));
+                state = RED;
+                break;
+        }
     }
 
     return 0;
-} 
+}
