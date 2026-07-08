@@ -2,12 +2,9 @@
 #include <thread>
 #include <chrono>
 using namespace std;
-
 enum State { RED, GREEN, YELLOW };
-
 int main() {
     State state = RED;
-
     while (true) {
         switch (state) {
             case RED:
@@ -15,13 +12,11 @@ int main() {
                 this_thread::sleep_for(chrono::seconds(5));
                 state = GREEN;
                 break;
-
             case GREEN:
                 cout << "RED: OFF  YELLOW: OFF  GREEN: ON" << endl;
                 this_thread::sleep_for(chrono::seconds(5));
                 state = YELLOW;
                 break;
-
             case YELLOW:
                 cout << "RED: OFF  YELLOW: ON  GREEN: OFF" << endl;
                 this_thread::sleep_for(chrono::seconds(2));
@@ -29,6 +24,5 @@ int main() {
                 break;
         }
     }
-
     return 0;
 }
