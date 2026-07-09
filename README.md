@@ -26,16 +26,21 @@ La sequenza richiesta è:
 | S3    | OFF | ON     | OFF   | 2s    |
 
 Dopo lo stato S3 il sistema ritorna allo stato iniziale S0.
-invece in il codice di c++ ho utilizzato solo 3 stati 
+invece in il codice di c++ ho utilizzato solo 3 stati
+
  3. Progettazione FSM
+
   Che cosa è una FSM
 
 FSM significa Finite State Machine
+
 È un modello che descrive un sistema attraverso:
 State (stati) → condizioni possibili del sistema.
 Transition (transizioni) → passaggi tra stati.
 Action (azioni)→ operazioni eseguite nello stato.
- 4. Diagramma FSM 
+
+ 4. Diagramma FSM
+  
  in codesys
 
 
