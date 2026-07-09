@@ -11,8 +11,7 @@ Il comportamento del semaforo viene simulato in due ambienti:
 1. CoDeSys - Structured Text (ST)**
    Utilizzando un PLC virtuale e il timer TON.
 2. C++ - Visual Studio Code**
-   Utilizzando la console per simulare l'accensione dei LED.
-L'obiettivo principale è progettare prima la macchina a stati e successivamente implementarla in linguaggi diversi.
+
 2. Analisi del problema
 
 Un semaforo è un sistema sequenziale perché il comportamento dipende dallo stato precedente.
